@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cardiff-public-art-models/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/cardiff-public-art-models/static/js/main.d7be6c57.chunk.js",
+    "main.js.map": "/cardiff-public-art-models/static/js/main.d7be6c57.chunk.js.map",
+    "runtime-main.js": "/cardiff-public-art-models/static/js/runtime-main.7931ecea.js",
+    "runtime-main.js.map": "/cardiff-public-art-models/static/js/runtime-main.7931ecea.js.map",
+    "static/js/2.146243c2.chunk.js": "/cardiff-public-art-models/static/js/2.146243c2.chunk.js",
+    "static/js/2.146243c2.chunk.js.map": "/cardiff-public-art-models/static/js/2.146243c2.chunk.js.map",
+    "static/js/3.5f34c64e.chunk.js": "/cardiff-public-art-models/static/js/3.5f34c64e.chunk.js",
+    "static/js/3.5f34c64e.chunk.js.map": "/cardiff-public-art-models/static/js/3.5f34c64e.chunk.js.map",
+    "index.html": "/cardiff-public-art-models/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/cardiff-public-art-models/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.146243c2.chunk.js.LICENSE.txt": "/cardiff-public-art-models/static/js/2.146243c2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7931ecea.js",
+    "static/js/2.146243c2.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.d7be6c57.chunk.js"
+  ]
+}
