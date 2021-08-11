@@ -1,105 +1,56 @@
-import './App.css';
-import React, {useMemo, useRef} from 'react';
-import ReactDOM from 'react-dom'
-import {Canvas} from '@react-three/fiber'
-import {Suspense} from 'react'
-import {useLoader} from '@react-three/fiber'
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'
-import {Environment, OrbitControls} from "@react-three/drei";
-import {ModelList} from "./ModelList"
-import scene from "three/examples/jsm/offscreen/scene";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 
-var modelNames = ["skeleton", "skeleton2"]
-var modelInfos = []
+const useStyles = makeStyles({
+  table: {
+    minWidth: 650,
+  },
+});
 
-function readAllModels() {
-  // const fs = require('fs')
-  //
-  //
-  //   fs.readdirSync("./models").forEach(function (modelFolder){
-  //     fs.readFile("introduction.txt",'utf8',((err, data) => {
-  //         console.log(data);
-  //     }))
-  //   })
-
-  // for (let modelName in modelNames) {
-  //   const reader = new FileReader();
-  //   reader.onload = async (e)=>{
-  //     const text = e.target.result
-  //     console.log(text)
-  //     alert(text)
-  //   }
-  //   reader.readAsText(new File("./models/skeleton/introduction.txt"));
-  if (modelInfos.length !== 0) return;
-
-  for (let i = 0; i < modelNames.length; i++) {
-    let modelName = modelNames[i];
-    let path = './models/' + modelName + '/introduction.txt'
-    console.log(path)
-    fetch(path)
-      .then((r) => r.text())
-      .then(text => {
-        console.log(text);
-      })
-  }
-
+function createData(folder,name, fbxUrl, photosUrl) {
+  return { folder, name, fbxUrl, photosUrl };
 }
 
-function sceneFallBack() {
-  console.log("scene fall back")
-}
+const rows = [
+  createData('skeleton', "Monument for Diverse Ethnic and Commonwealth People In War","https://drive.google.com/file/d/1LNMuZXiT8NdX2J66xm80QdM64ZkXIm9_/view?usp=sharing", "#"),
+  createData('skeleton2','Drinking Fountain', "https://drive.google.com/file/d/1v5fbbISKRjkV5ZrtvZSmvoDCnhAFP8Fr/view?usp=sharing", "#"),
+];
 
-//
-// function Scene() {
-//   const gltf = useLoader(GLTFLoader, './models/skeleton/scene.gltf')
-//   return (
-//     <Suspense fallback={sceneFallBack}>
-//       <OrbitControls/>
-//       <primitive object={gltf.scene} scale={0.5}/>
-//       <Environment preset="sunset" background/>
-//     </Suspense>
-//   )
-// }
-
-const Model = (props) => {
+function BasicTable() {
+  const classes = useStyles();
 
   return (
-    <>
-
-    </>
+    <TableContainer component={Paper}>
+      <Table className={classes.table} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Photo</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell align="right">model (.fbx)</TableCell>
+            <TableCell align="right">original photos</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow key={row.name}>
+              <TableCell><img src={'./models/'+row.folder+'/image.jpg'} width="75" height="100"/></TableCell>
+              <TableCell component="th" scope="row">{row.name}</TableCell>
+              <TableCell align="right"><a href={row.fbxUrl}>Download</a></TableCell>
+              <TableCell align="right"><a href={row.photosUrl}>Download</a></TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
-};
-
-// const ModelList = (props) => {
-//   return (
-//     <div>
-//       <p> skeleton </p>
-//       <p> skeleton2 </p>
-//     </div>
-//   )
-// }
-
-function ModelCanvas(props){
-  let path = './models/'+modelNames[props.selectedModel] + '/scene.gltf';
-  return (
-      <Canvas>
-        <Suspense fallback={null}>
-          <Box url={path}/>
-          <OrbitControls/>
-          <Environment preset="sunset" background/>
-        </Suspense>
-      </Canvas>
-    )
-
 }
-
-function Box({ url }) {
-  const { scene } = useLoader(GLTFLoader, url);
-  const copiedScene = useMemo(() => scene.clone(), [scene]);
-
-  return <primitive object={copiedScene} />;
-}
-
 
 class App extends React.Component {
   constructor(props) {
@@ -117,14 +68,13 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <ModelList selectedModel={this.state.selectedModel} onSelectedModelChange={this.handleSelectedModelChanged}/>
-        <div className="Canvas">
-          <ModelCanvas selectedModel={this.state.selectedModel}/>
-        </div>
+        <h1>Cardiff Public Art Model Repository - Under Construction </h1>
+        <p>This site displays 3D models created during the Cardiff University summer project Computational Culture Heritage. These models are reconstructed from photos by Meshroom and Autodesk Recap. All the model meshes and original photos are available to download.
+        </p>
+        <BasicTable/>
       </div>
     );
   }
 }
 
 export default App;
-//<img src={fountain_img} className="model-image" height="500" width="400"/>
