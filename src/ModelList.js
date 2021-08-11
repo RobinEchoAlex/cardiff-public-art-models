@@ -6,42 +6,47 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     width: '100%',
+//     maxWidth: 360,
+//     backgroundColor: theme.palette.background.paper,
+//   },
+// }));
 
-export const ModelList = () => {
+export class ModelList extends React.Component {
 
-  const classes = useStyles();
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  constructor(props) {
+    super(props);
+    this.handleListItemClick = this.handleListItemClick.bind(this);
+  }
 
-  const handleListItemClick = (event, index) => {
-    setSelectedIndex(index);
+  handleListItemClick = (event, index) => {
+    this.props.onSelectedModelChange(index);
   };
 
-  return (
-    <div className={classes.root}>
-      <List component="nav" aria-label="main mailbox folders">
-        <ListItem
-          button
-          selected={selectedIndex === 0}
-          onClick={(event) => handleListItemClick(event, 0)}
-        >
-          <ListItemText primary="Skeleton"/>
-        </ListItem>
-        <ListItem
-          button
-          selected={selectedIndex === 1}
-          onClick={(event) => handleListItemClick(event, 1)}
-        >
-          <ListItemText primary="Skeleton22"/>
-        </ListItem>
-      </List>
-    </div>
-  );
+  render() {
+    const selectedIndex = this.props.selectedModel;
+    return (
+      <div className="List">
+        <List component="nav" aria-label="main mailbox folders">
+          <ListItem
+            button
+            selected={selectedIndex === 0}
+            onClick={(event) => this.handleListItemClick(event, 0)}
+          >
+            <ListItemText primary="Skeleton"/>
+          </ListItem>
+          <ListItem
+            button
+            selected={selectedIndex === 1}
+            onClick={(event) => this.handleListItemClick(event, 1)}
+          >
+            <ListItemText primary="Skeleton22"/>
+          </ListItem>
+        </List>
+      </div>
+    )
+  }
 }
 

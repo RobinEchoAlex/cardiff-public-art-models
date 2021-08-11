@@ -1,4 +1,5 @@
 import './App.css';
+import React, {useMemo, useRef} from 'react';
 import ReactDOM from 'react-dom'
 import {Canvas} from '@react-three/fiber'
 import {Suspense} from 'react'
@@ -6,9 +7,11 @@ import {useLoader} from '@react-three/fiber'
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'
 import {Environment, OrbitControls} from "@react-three/drei";
 import {ModelList} from "./ModelList"
+import scene from "three/examples/jsm/offscreen/scene";
 
 var modelNames = ["skeleton", "skeleton2"]
 var modelInfos = []
+
 function readAllModels() {
   // const fs = require('fs')
   //
@@ -27,11 +30,11 @@ function readAllModels() {
   //     alert(text)
   //   }
   //   reader.readAsText(new File("./models/skeleton/introduction.txt"));
-  if (modelInfos.length!==0) return;
+  if (modelInfos.length !== 0) return;
 
-  for (let i=0; i<modelNames.length;i++) {
+  for (let i = 0; i < modelNames.length; i++) {
     let modelName = modelNames[i];
-    let path = './models/'+ modelName +'/introduction.txt'
+    let path = './models/' + modelName + '/introduction.txt'
     console.log(path)
     fetch(path)
       .then((r) => r.text())
@@ -46,23 +49,23 @@ function sceneFallBack() {
   console.log("scene fall back")
 }
 
-function Scene() {
-  const gltf = useLoader(GLTFLoader, './models/skeleton/scene.gltf')
-  return (
-    <Suspense fallback={sceneFallBack}>
-      <OrbitControls/>
-      <primitive object={gltf.scene} scale={0.5}/>
-      <Environment preset="sunset" background/>
-    </Suspense>
-  )
-}
+//
+// function Scene() {
+//   const gltf = useLoader(GLTFLoader, './models/skeleton/scene.gltf')
+//   return (
+//     <Suspense fallback={sceneFallBack}>
+//       <OrbitControls/>
+//       <primitive object={gltf.scene} scale={0.5}/>
+//       <Environment preset="sunset" background/>
+//     </Suspense>
+//   )
+// }
 
 const Model = (props) => {
-  let path = './models/'+ props.name +'/scene.gltf'
-  const gltf = useLoader(GLTFLoader, path);
+
   return (
     <>
-      <primitive object={gltf.scene} scale={0.8}/>
+
     </>
   );
 };
@@ -76,22 +79,51 @@ const Model = (props) => {
 //   )
 // }
 
-
-function App() {
+function ModelCanvas(props){
+  let path = './models/'+modelNames[props.selectedModel] + '/scene.gltf';
   return (
-    <div className="App">
-      <ModelList/>
-      <div className="Canvas">
-        <Canvas>
-          <Suspense fallback={null}>
-            <Model name="skeleton"/>
-            <OrbitControls/>
-            <Environment preset="sunset" background/>
-          </Suspense>
-        </Canvas>
+      <Canvas>
+        <Suspense fallback={null}>
+          <Box url={path}/>
+          <OrbitControls/>
+          <Environment preset="sunset" background/>
+        </Suspense>
+      </Canvas>
+    )
+
+}
+
+function Box({ url }) {
+  const { scene } = useLoader(GLTFLoader, url);
+  const copiedScene = useMemo(() => scene.clone(), [scene]);
+
+  return <primitive object={copiedScene} />;
+}
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSelectedModelChanged = this.handleSelectedModelChanged.bind(this);
+    this.state = {selectedModel: 0};
+  }
+
+  handleSelectedModelChanged(selectedModel) {
+    this.setState({selectedModel: selectedModel});
+    console.log(selectedModel + "is selected");
+  }
+
+  render() {
+
+    return (
+      <div className="App">
+        <ModelList selectedModel={this.state.selectedModel} onSelectedModelChange={this.handleSelectedModelChanged}/>
+        <div className="Canvas">
+          <ModelCanvas selectedModel={this.state.selectedModel}/>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
