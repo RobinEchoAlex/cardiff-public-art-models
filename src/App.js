@@ -69,7 +69,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Cardiff Public Art Model Repository - Under Construction </h1>
-        <p>This site displays 3D models created during the Cardiff University summer project Computational Culture Heritage. These models are reconstructed from photos by Meshroom and Autodesk Recap. All the model meshes and original photos are available to download.
+        <p>This site displays 3D models created during the Cardiff University summer project Computational Culture Heritage. These models are reconstructed from photos with Meshroom and Autodesk Recap. All the model meshes and original photos are available to download.
         </p>
         <BasicTable/>
       </div>
