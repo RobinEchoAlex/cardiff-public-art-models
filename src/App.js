@@ -16,21 +16,23 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(folder,name, fbxUrl, photosUrl, coord) {
-  return { folder, name, fbxUrl, photosUrl, coord };
+function createData(folder,name, fbxUrl, photosUrl, coord, sketchfabUrl) {
+  return { folder, name, fbxUrl, photosUrl, coord , sketchfabUrl};
 }
 
 const rows = [
   createData('skeleton',
-    "Monument for Diverse Ethnic and Commonwealth People In War",
+    "Memorial to Diverse Ethnic and Commonwealth People In War",
     "https://drive.google.com/file/d/1LNMuZXiT8NdX2J66xm80QdM64ZkXIm9_/view?usp=sharing",
     "#",
-    [51.485999751019435, -3.1802259356889366]),
+    [51.485999751019435, -3.1802259356889366],
+    "https://sketchfab.com/models/ca05b951486840cda1a45e7a890128f9/embed"),
   createData('skeleton2',
     'Drinking Fountain',
     "https://drive.google.com/file/d/1v5fbbISKRjkV5ZrtvZSmvoDCnhAFP8Fr/view?usp=sharing",
     "#",
-    [51.48374634245954, -3.1782340219244305]),
+    [51.48374634245954, -3.1782340219244305],
+    "https://sketchfab.com/models/a24b2438e3674b3b8c334d136dc89126/embed"),
   createData('magistrates',
     'Magistrate Court',
     "https://drive.google.com/file/d/1-q6LwWB1VO4VjxMqtHlYMdinxTKZPByG/view?usp=sharing",
@@ -77,26 +79,45 @@ class BasicTable extends React.Component{
   }
 }
 
+class SketchfabEmbedding extends  React.Component{
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    if (this.props.title==null || this.props.url==null) return(
+      <iframe title="Drinking Fountain" frameBorder="0" allowFullScreen mozallowfullscreen="true"
+              webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking="true"
+              execution-while-out-of-viewport="true" execution-while-not-rendered="true" web-share="true"
+              src="https://sketchfab.com/models/a24b2438e3674b3b8c334d136dc89126/embed"></iframe>
+    )
+    else return(
+      <iframe title={this.props.title} frameBorder="0" allowFullScreen mozallowfullscreen="true"
+              webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking="true"
+              execution-while-out-of-viewport="true" execution-while-not-rendered="true" web-share="true"
+              src={this.props.url}></iframe>
+    )
+  }
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleSelectedModelChanged = this.handleSelectedModelChanged.bind(this);
-    this.getCoord = this.getCoord.bind(this);
-    this.state = {selectedModel: "Null"};
+    this.getObj = this.getObj.bind(this);
+    this.state = {selectedModel: "Memorial to Diverse Ethnic and Commonwealth People In War"};
   }
 
   handleSelectedModelChanged(selectedModel) {
     this.setState({selectedModel: selectedModel});
   }
 
-  getCoord(){
-    console.log("getcoord")
-    if (this.state.selectedModel==="Null") return [51.48, -3.178];
-    return rows.find(obj=> {return obj.name===this.state.selectedModel}).coord
+  getObj(){
+    return rows.find(obj=> {return obj.name===this.state.selectedModel})
   }
 
   render() {
-
+    let obj = this.getObj();
     return (
       <div className="App">
         <h1 id="title">Cardiff Public Art Model Repository - Under Construction </h1>
@@ -106,13 +127,10 @@ class App extends React.Component {
           <BasicTable onSelectedModelChanged={this.handleSelectedModelChanged} />
         </div>
         <div id="map">
-          <Leaflet id="map" coord={this.getCoord()}/>
+          <Leaflet id="map" coord={obj.coord}/>
         </div>
         <div className="sketchfab-embed-wrapper">
-          <iframe title="Drinking Fountain" frameBorder="0" allowFullScreen mozallowfullscreen="true"
-                  webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking="true"
-                  execution-while-out-of-viewport="true" execution-while-not-rendered="true" web-share="true"
-                  src="https://sketchfab.com/models/a24b2438e3674b3b8c334d136dc89126/embed"></iframe>
+          <SketchfabEmbedding url={obj.sketchfabUrl} title={obj.name}/>
         </div>
       </div>
     );
