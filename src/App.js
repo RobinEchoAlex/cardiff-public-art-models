@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import {Leaflet} from "./leaflet";
 
 const useStyles = makeStyles({
   table: {
@@ -14,13 +15,20 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(folder,name, fbxUrl, photosUrl) {
+function createData(folder,name, fbxUrl, photosUrl, coord) {
   return { folder, name, fbxUrl, photosUrl };
 }
 
 const rows = [
-  createData('skeleton', "Monument for Diverse Ethnic and Commonwealth People In War","https://drive.google.com/file/d/1LNMuZXiT8NdX2J66xm80QdM64ZkXIm9_/view?usp=sharing", "#"),
-  createData('skeleton2','Drinking Fountain', "https://drive.google.com/file/d/1v5fbbISKRjkV5ZrtvZSmvoDCnhAFP8Fr/view?usp=sharing", "#"),
+  createData('skeleton',
+    "Monument for Diverse Ethnic and Commonwealth People In War",
+    "https://drive.google.com/file/d/1LNMuZXiT8NdX2J66xm80QdM64ZkXIm9_/view?usp=sharing",
+    "#",
+    ""),
+  createData('skeleton2',
+    'Drinking Fountain',
+    "https://drive.google.com/file/d/1v5fbbISKRjkV5ZrtvZSmvoDCnhAFP8Fr/view?usp=sharing",
+    "#"),
 ];
 
 function BasicTable() {
@@ -72,6 +80,7 @@ class App extends React.Component {
         <p>This site displays 3D models created during the Cardiff University summer project Computational Culture Heritage. These models are reconstructed from photos with Meshroom and Autodesk Recap. All the model meshes and original photos are available to download.
         </p>
         <BasicTable/>
+        <Leaflet coord={[51.505, -0.2]}/>
       </div>
     );
   }
