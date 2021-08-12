@@ -38,6 +38,11 @@ const rows = [
     "https://drive.google.com/file/d/1-q6LwWB1VO4VjxMqtHlYMdinxTKZPByG/view?usp=sharing",
     "#",
     [51.48152690383384, -3.1663288597426518]),
+  createData('girl',
+    'Girl',
+    '',
+    '',
+    [51.485165905517405, -3.1768937541292517])
 ];
 
 class BasicTable extends React.Component{
@@ -112,7 +117,7 @@ class App extends React.Component {
     this.setState({selectedModel: selectedModel});
   }
 
-  getObj(){
+  getObj(){//TODO map rather than array
     return rows.find(obj=> {return obj.name===this.state.selectedModel})
   }
 
@@ -120,7 +125,7 @@ class App extends React.Component {
     let obj = this.getObj();
     return (
       <div className="App">
-        <h1 id="title">Cardiff Public Art Model Repository - Under Construction </h1>
+        <h1 id="title">Cardiff Public Art Model Repository - Site Under Construction </h1>
         <p id="intro">This site displays 3D models created during the Cardiff University summer project Computational Culture Heritage. These models are reconstructed from photos with Meshroom and Autodesk Recap. All the model meshes and original photos are available to download.
         </p>
         <div id="table">
