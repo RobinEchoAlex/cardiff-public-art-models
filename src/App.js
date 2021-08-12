@@ -98,6 +98,12 @@ class App extends React.Component {
         </p>
         <BasicTable onSelectedModelChanged={this.handleSelectedModelChanged} />
         <Leaflet coord={this.getCoord()}/>
+        <div className="sketchfab-embed-wrapper">
+          <iframe title="Drinking Fountain" frameBorder="0" allowFullScreen mozallowfullscreen="true"
+                  webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking
+                  execution-while-out-of-viewport execution-while-not-rendered web-share
+                  src="https://sketchfab.com/models/a24b2438e3674b3b8c334d136dc89126/embed"></iframe>
+        </div>
       </div>
     );
   }
