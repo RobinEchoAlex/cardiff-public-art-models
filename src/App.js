@@ -8,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import {Leaflet} from "./leaflet";
+import "./App.css"
 
 const useStyles = makeStyles({
   table: {
@@ -93,15 +94,19 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h1>Cardiff Public Art Model Repository - Under Construction </h1>
-        <p>This site displays 3D models created during the Cardiff University summer project Computational Culture Heritage. These models are reconstructed from photos with Meshroom and Autodesk Recap. All the model meshes and original photos are available to download.
+        <h1 id="title">Cardiff Public Art Model Repository - Under Construction </h1>
+        <p id="intro">This site displays 3D models created during the Cardiff University summer project Computational Culture Heritage. These models are reconstructed from photos with Meshroom and Autodesk Recap. All the model meshes and original photos are available to download.
         </p>
-        <BasicTable onSelectedModelChanged={this.handleSelectedModelChanged} />
-        <Leaflet coord={this.getCoord()}/>
+        <div id="table">
+          <BasicTable onSelectedModelChanged={this.handleSelectedModelChanged} />
+        </div>
+        <div id="map">
+          <Leaflet id="map" coord={this.getCoord()}/>
+        </div>
         <div className="sketchfab-embed-wrapper">
           <iframe title="Drinking Fountain" frameBorder="0" allowFullScreen mozallowfullscreen="true"
-                  webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking
-                  execution-while-out-of-viewport execution-while-not-rendered web-share
+                  webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking="true"
+                  execution-while-out-of-viewport="true" execution-while-not-rendered="true" web-share="true"
                   src="https://sketchfab.com/models/a24b2438e3674b3b8c334d136dc89126/embed"></iframe>
         </div>
       </div>
