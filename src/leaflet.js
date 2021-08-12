@@ -12,6 +12,7 @@ export class Leaflet extends React.Component{
 
   render(){
     let coord = this.props.coord
+    console.log(coord)
     return(
       <MapContainer center={coord} zoom={13} scrollWheelZoom={false}>
         <TileLayer
