@@ -31,6 +31,11 @@ const rows = [
     "https://drive.google.com/file/d/1v5fbbISKRjkV5ZrtvZSmvoDCnhAFP8Fr/view?usp=sharing",
     "#",
     [51.48374634245954, -3.1782340219244305]),
+  createData('magistrates',
+    'Magistrate Court',
+    "https://drive.google.com/file/d/1-q6LwWB1VO4VjxMqtHlYMdinxTKZPByG/view?usp=sharing",
+    "#",
+    [51.48152690383384, -3.1663288597426518]),
 ];
 
 class BasicTable extends React.Component{
