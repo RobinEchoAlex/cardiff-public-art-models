@@ -2,6 +2,7 @@
   "name": "computational-cultural-heritage",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://robinEchoAlex.github.io/cardiff-public-art-models",
   "dependencies": {
     "@babylonjs/core": "4.1.0",
     "@babylonjs/gui": "4.1.0",
