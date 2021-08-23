@@ -1,4 +1,4 @@
-.App {
+.app {
   font-family: sans-serif;
   text-align: center;
   height: 100vh;
@@ -8,6 +8,13 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap:10px;
+}
+
+.app-mobile {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
@@ -20,14 +27,28 @@ body {
   grid-column: 1;
 }
 
+#table-mobile {
+  margin: 0 auto;
+  width: 90vw;
+}
+
 #map{
   grid-row: 3;
   grid-column: 2;
 }
 
+#map-mobile{
+  margin: 0 auto;
+  width: 90vw;
+}
+
 .sketchfab-embed-wrapper {
   grid-row: 2;
   grid-column: 2;
+}
+
+.sketchfab-embed-wrapper-mobile {
+  min-height: 100px;
 }
 
 iframe{
