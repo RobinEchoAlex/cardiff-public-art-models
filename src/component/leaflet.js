@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import React from 'react';
-import "./leaflet.css"
+import "./css/leaflet.css"
 
 //https://stackoverflow.com/questions/67552020/how-to-fix-error-failed-to-compile-node-modules-react-leaflet-core-esm-pat
 //https://github.com/PaulLeCam/react-leaflet/issues/453
