@@ -48,7 +48,7 @@ const MobileLayout = (props) => {
         <SketchfabEmbedding url={obj.sketchfabUrl} title={obj.name}/>
       </div>
       <div id="map-mobile">
-        <Leaflet id="map" coord={obj.coord}/>
+        <Leaflet id="map" coord={obj.coord} text={obj.name}/>
       </div>
     </div>
   )

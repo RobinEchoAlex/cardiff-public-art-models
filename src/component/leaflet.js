@@ -12,7 +12,9 @@ export class Leaflet extends React.Component{
 
   render(){
     let coord = this.props.coord
-    console.log(coord)
+    const text = this.props.text
+
+    console.log(text)
     return(
       <MapContainer center={coord} zoom={13} scrollWheelZoom={false}>
         <TileLayer
@@ -20,9 +22,7 @@ export class Leaflet extends React.Component{
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={coord}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
+          <Popup>{text}</Popup>
         </Marker>
       </MapContainer>
     );
