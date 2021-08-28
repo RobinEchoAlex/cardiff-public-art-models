@@ -8,6 +8,30 @@ import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import {rows} from './Data'
 
+class TableCellText extends React.Component{
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const url = this.props.url;
+    const text = this.props.text;
+    if (url === null || url === ""){
+      return(
+        "Not available yet"
+      )
+    }else {
+      return(
+        <>
+          <a href={url}>Download</a>
+          <br/>
+          <text>{text}</text>
+        </>
+      )
+    }
+  }
+}
+
 export default class BasicTable extends React.Component {
   //const classes = useStyles();
   constructor(props) {
@@ -50,8 +74,8 @@ export default class BasicTable extends React.Component {
                     }}>
                       <TableCell><img src={'./models/' + row.folder + '/image.jpg'} width="75" height="100"/></TableCell>
                       <TableCell component="th" scope="row">{row.name}</TableCell>
-                      <TableCell align="right"><a href={row.fbxUrl}>Download</a></TableCell>
-                      <TableCell align="right"><a href={row.photosUrl}>Download</a><br/>{row.photoUrlText}</TableCell>
+                      <TableCell align="right"><TableCellText url={row.fbxUrl}/></TableCell>
+                      <TableCell align="right"><TableCellText url={row.photosUrl} text={row.photoUrlText}/></TableCell>
                     </TableRow>
                   )
                 }
