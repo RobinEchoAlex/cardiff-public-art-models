@@ -26,6 +26,12 @@ const LaptopLayout = (props) => {
       <div className="sketchfab-embed-wrapper">
         <SketchfabEmbedding url={obj.sketchfabUrl} title={obj.name}/>
       </div>
+      <footer id = "footer">
+        <hr/>
+        <p>For all the works displayed on this website and are covered by the freedom of panorama, they are released under CC BY-SA 4.0.
+          For all other works, the are intended for non-commercial research and study under the fair dealing terms.
+        </p>
+      </footer>
     </div>
   )
 }
@@ -50,6 +56,11 @@ const MobileLayout = (props) => {
       <div id="map-mobile">
         <Leaflet id="map" coord={obj.coord} text={obj.name}/>
       </div>
+      <footer id="footer-mobile">
+        <p>For all the works displayed on this website and are covered by the freedom of panorama, they are released under CC BY-SA 4.0.
+          For all other works, the are intended for non-commercial research and study under the fair dealing terms.
+        </p>
+      </footer>
     </div>
   )
 }
