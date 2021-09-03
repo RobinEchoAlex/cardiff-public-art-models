@@ -80,6 +80,7 @@ class App extends React.Component {
   }
 
   getObj() {//TODO map rather than array
+    //console.log(JSON.stringify(rows));
     return rows.find(obj => {
       return obj.name === this.state.selectedModel
     })
