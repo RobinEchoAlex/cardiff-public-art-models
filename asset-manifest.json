@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/cardiff-public-art-models/static/css/main.8f7d87e1.chunk.css",
-    "main.js": "/cardiff-public-art-models/static/js/main.52ae3de4.chunk.js",
-    "main.js.map": "/cardiff-public-art-models/static/js/main.52ae3de4.chunk.js.map",
-    "runtime-main.js": "/cardiff-public-art-models/static/js/runtime-main.89955837.js",
-    "runtime-main.js.map": "/cardiff-public-art-models/static/js/runtime-main.89955837.js.map",
-    "static/js/2.4703d70f.chunk.js": "/cardiff-public-art-models/static/js/2.4703d70f.chunk.js",
-    "static/js/2.4703d70f.chunk.js.map": "/cardiff-public-art-models/static/js/2.4703d70f.chunk.js.map",
-    "static/js/3.043d17f3.chunk.js": "/cardiff-public-art-models/static/js/3.043d17f3.chunk.js",
-    "static/js/3.043d17f3.chunk.js.map": "/cardiff-public-art-models/static/js/3.043d17f3.chunk.js.map",
+    "main.js": "/cardiff-public-art-models/static/js/main.ccfafe24.chunk.js",
+    "main.js.map": "/cardiff-public-art-models/static/js/main.ccfafe24.chunk.js.map",
+    "runtime-main.js": "/cardiff-public-art-models/static/js/runtime-main.049f8c98.js",
+    "runtime-main.js.map": "/cardiff-public-art-models/static/js/runtime-main.049f8c98.js.map",
+    "static/js/2.f6888d01.chunk.js": "/cardiff-public-art-models/static/js/2.f6888d01.chunk.js",
+    "static/js/2.f6888d01.chunk.js.map": "/cardiff-public-art-models/static/js/2.f6888d01.chunk.js.map",
+    "static/js/3.2235735c.chunk.js": "/cardiff-public-art-models/static/js/3.2235735c.chunk.js",
+    "static/js/3.2235735c.chunk.js.map": "/cardiff-public-art-models/static/js/3.2235735c.chunk.js.map",
     "index.html": "/cardiff-public-art-models/index.html",
     "static/css/main.8f7d87e1.chunk.css.map": "/cardiff-public-art-models/static/css/main.8f7d87e1.chunk.css.map",
-    "static/js/2.4703d70f.chunk.js.LICENSE.txt": "/cardiff-public-art-models/static/js/2.4703d70f.chunk.js.LICENSE.txt"
+    "static/js/2.f6888d01.chunk.js.LICENSE.txt": "/cardiff-public-art-models/static/js/2.f6888d01.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.89955837.js",
-    "static/js/2.4703d70f.chunk.js",
+    "static/js/runtime-main.049f8c98.js",
+    "static/js/2.f6888d01.chunk.js",
     "static/css/main.8f7d87e1.chunk.css",
-    "static/js/main.52ae3de4.chunk.js"
+    "static/js/main.ccfafe24.chunk.js"
   ]
 }
