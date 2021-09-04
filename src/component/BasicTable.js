@@ -72,7 +72,7 @@ export default class BasicTable extends React.Component {
                     <TableRow key={row.name} hover={true} selected={isSelected} onClick={(e) => {
                       this.handleClick(e, row.name)
                     }}>
-                      <TableCell><img src={'./models/' + row.folder + '/image.jpg'} width="75" height="100"/></TableCell>
+                      <TableCell><img src={'./models/' + row.folder + '/image.jpg'} width="75" height="100" alt=""/></TableCell>
                       <TableCell component="th" scope="row">{row.name}</TableCell>
                       <TableCell align="right"><TableCellText url={row.fbxUrl} text={row.fbxUrlText}/></TableCell>
                       <TableCell align="right"><TableCellText url={row.photosUrl} text={row.photoUrlText}/></TableCell>
