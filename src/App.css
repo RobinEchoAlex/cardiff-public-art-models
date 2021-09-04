@@ -6,7 +6,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 10% 40% 40% 10%;
   grid-gap:10px;
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 #table {
-  grid-row: 2/3;
+  grid-row: 2/4;
   grid-column: 1;
 }
 
@@ -35,6 +35,12 @@ body {
 #map{
   grid-row: 3;
   grid-column: 2;
+}
+
+.leaflet-container{
+  max-width: 90%;
+  max-height: 100%;
+  margin: auto;
 }
 
 #map-mobile{

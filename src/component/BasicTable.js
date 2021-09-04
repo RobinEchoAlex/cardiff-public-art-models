@@ -7,6 +7,7 @@ import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import {rows} from './Data'
+import {withStyles} from "@material-ui/core";
 
 class TableCellText extends React.Component{
   constructor(props) {
@@ -32,6 +33,15 @@ class TableCellText extends React.Component{
   }
 }
 
+const StyledTableCell = withStyles((theme) => ({
+  head: {
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.common.white,
+  },
+  body: {
+  },
+}))(TableCell);
+
 export default class BasicTable extends React.Component {
   //const classes = useStyles();
   constructor(props) {
@@ -54,14 +64,14 @@ export default class BasicTable extends React.Component {
 
   render() {
     return (
-      <TableContainer component={Paper}>
-        <Table className={"table"} aria-label="simple table">
-          <TableHead>
+      <TableContainer component={Paper} style={{ maxHeight: "100%" }}>
+        <Table className={"table"} aria-label="simple table" stickyHeader>
+          <TableHead style={{color:"floralwhite"}}>
             <TableRow>
-              <TableCell>Photo</TableCell>
-              <TableCell>Name</TableCell>
-              <TableCell align="right">model (.fbx)</TableCell>
-              <TableCell align="right">original photos</TableCell>
+              <StyledTableCell>Photo</StyledTableCell>
+              <StyledTableCell>Name</StyledTableCell>
+              <StyledTableCell align="right">model (.fbx)</StyledTableCell>
+              <StyledTableCell align="right">original photos</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
