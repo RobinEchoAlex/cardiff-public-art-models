@@ -7,7 +7,9 @@ import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import {rows} from './Data'
-import {withStyles} from "@material-ui/core";
+import {Link, withStyles} from "@material-ui/core";
+import {Redirect, useHistory} from "react-router-dom";
+
 
 class TableCellText extends React.Component{
   constructor(props) {
@@ -55,7 +57,8 @@ export default class BasicTable extends React.Component {
 
   handleClick(event, name) {
     this.props.onSelectedModelChanged(name);
-    this.setState({selected: name})
+    this.setState({selected: name});
+    this.setState({redirect: true});
   };
 
   isSelected(name) {
@@ -63,6 +66,10 @@ export default class BasicTable extends React.Component {
   }
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect push to={this.state.selected}/>;
+    }
+
     return (
       <TableContainer component={Paper} style={{ maxHeight: "100%" }}>
         <Table className={"table"} aria-label="simple table" stickyHeader>
@@ -75,6 +82,7 @@ export default class BasicTable extends React.Component {
             </TableRow>
           </TableHead>
           <TableBody>
+
             {//https://stackoverflow.com/questions/52313755/material-ui-table-how-to-make-cells-selectable
               rows.map((row) => {
                   const isSelected = this.isSelected(row.name);
@@ -87,9 +95,11 @@ export default class BasicTable extends React.Component {
                       <TableCell align="right"><TableCellText url={row.fbxUrl} text={row.fbxUrlText}/></TableCell>
                       <TableCell align="right"><TableCellText url={row.photosUrl} text={row.photoUrlText}/></TableCell>
                     </TableRow>
+
                   )
                 }
               )}
+
           </TableBody>
         </Table>
       </TableContainer>

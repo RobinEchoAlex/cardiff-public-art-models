@@ -5,6 +5,13 @@ import SketchfabEmbedding from './component/SketchfabEmbedding'
 import {Leaflet} from "./component/leaflet";
 import "./App.css"
 import MediaQuery from 'react-responsive'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import ModelPage from "./component/ModelPage";
 
 const LaptopLayout = (props) => {
   const handleSelectedModelChanged = props.handleSelectedModelChanged
@@ -26,9 +33,10 @@ const LaptopLayout = (props) => {
       <div className="sketchfab-embed-wrapper">
         <SketchfabEmbedding url={obj.sketchfabUrl} title={obj.name}/>
       </div>
-      <footer id = "footer">
+      <footer id="footer">
         <hr/>
-        <p>For all the works displayed on this website and are covered by the freedom of panorama, they are released under CC BY-SA 4.0.
+        <p>For all the works displayed on this website and are covered by the freedom of panorama, they are released
+          under CC BY-SA 4.0.
           For all other works, the are intended for non-commercial research and study under the fair dealing terms.
         </p>
       </footer>
@@ -57,7 +65,8 @@ const MobileLayout = (props) => {
         <Leaflet id="map" coord={obj.coord} text={obj.name}/>
       </div>
       <footer id="footer-mobile">
-        <p>For all the works displayed on this website and are covered by the freedom of panorama, they are released under CC BY-SA 4.0.
+        <p>For all the works displayed on this website and are covered by the freedom of panorama, they are released
+          under CC BY-SA 4.0.
           For all other works, the are intended for non-commercial research and study under the fair dealing terms.
         </p>
       </footer>
@@ -89,12 +98,36 @@ class App extends React.Component {
   render() {
     let obj = this.getObj();
     return (
-      <MediaQuery minWidth={826}>
-        {
-          (matches) => matches ? <LaptopLayout obj={obj} handleSelectedModelChanged={this.handleSelectedModelChanged}/>
-            : <MobileLayout obj={obj} handleSelectedModelChanged={this.handleSelectedModelChanged}/>
-        }
-      </MediaQuery>
+      <Router>
+        <div>
+
+        <Switch>
+          <Route path="/test">
+            <p>asdf</p>
+          </Route>
+
+          {rows.map((e)=>{
+            console.log("e"+e.name)
+            return(
+              <Route path={"/"+e.name}>
+                <ModelPage obj={e}/>
+              </Route>
+            )
+          })}
+
+          //Remember Always put this general path in the last position!
+          <Route path="/">
+            <MediaQuery minWidth={826}>
+              {
+                (matches) => matches ?
+                  <LaptopLayout obj={obj} handleSelectedModelChanged={this.handleSelectedModelChanged}/>
+                  : <MobileLayout obj={obj} handleSelectedModelChanged={this.handleSelectedModelChanged}/>
+              }
+            </MediaQuery>
+          </Route>
+        </Switch>
+      </div>
+      </Router>
     );
   }
 }
