@@ -50,7 +50,7 @@ const MobileLayout = (props) => {
 
   return (
     <div className="app-mobile">
-      <h1 id="title">Cardiff Public Art Model Repository - Site Under Construction </h1>
+      <h1 id="title">Cardiff Public Art Model Repository</h1>
       <p id="intro">This site displays 3D models created during the Cardiff University summer project Computational
         Culture Heritage. These models are reconstructed from photos with Meshroom and Autodesk Recap. All the model
         meshes and original photos are available to download.
