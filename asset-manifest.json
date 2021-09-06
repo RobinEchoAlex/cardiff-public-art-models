@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cardiff-public-art-models/static/css/main.6e05b025.chunk.css",
-    "main.js": "/cardiff-public-art-models/static/js/main.6c75928d.chunk.js",
-    "main.js.map": "/cardiff-public-art-models/static/js/main.6c75928d.chunk.js.map",
+    "main.js": "/cardiff-public-art-models/static/js/main.92dbb0a9.chunk.js",
+    "main.js.map": "/cardiff-public-art-models/static/js/main.92dbb0a9.chunk.js.map",
     "runtime-main.js": "/cardiff-public-art-models/static/js/runtime-main.f37cd921.js",
     "runtime-main.js.map": "/cardiff-public-art-models/static/js/runtime-main.f37cd921.js.map",
     "static/js/2.d159209d.chunk.js": "/cardiff-public-art-models/static/js/2.d159209d.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f37cd921.js",
     "static/js/2.d159209d.chunk.js",
     "static/css/main.6e05b025.chunk.css",
-    "static/js/main.6c75928d.chunk.js"
+    "static/js/main.92dbb0a9.chunk.js"
   ]
 }
