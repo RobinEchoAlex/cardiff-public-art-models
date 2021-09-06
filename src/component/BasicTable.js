@@ -66,7 +66,7 @@ export default class BasicTable extends React.Component {
   }
 
   render() {
-    if (this.state.redirect) {
+    if (this.state.redirect && this.props.isMobile) {
       return <Redirect push to={this.state.selected}/>;
     }
 

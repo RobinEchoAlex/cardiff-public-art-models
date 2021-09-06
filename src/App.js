@@ -25,7 +25,7 @@ const LaptopLayout = (props) => {
         meshes and original photos are available to download.
       </p>
       <div id="table">
-        <BasicTable onSelectedModelChanged={handleSelectedModelChanged}/>
+        <BasicTable onSelectedModelChanged={handleSelectedModelChanged} isMobile={false}/>
       </div>
       <div id="map">
         <Leaflet id="map" coord={obj.coord}/>
@@ -56,13 +56,7 @@ const MobileLayout = (props) => {
         meshes and original photos are available to download.
       </p>
       <div id="table-mobile">
-        <BasicTable onSelectedModelChanged={handleSelectedModelChanged}/>
-      </div>
-      <div className="sketchfab-embed-wrapper-mobile">
-        <SketchfabEmbedding url={obj.sketchfabUrl} title={obj.name}/>
-      </div>
-      <div id="map-mobile">
-        <Leaflet id="map" coord={obj.coord} text={obj.name}/>
+        <BasicTable onSelectedModelChanged={handleSelectedModelChanged} isMobile={true}/>
       </div>
       <footer id="footer-mobile">
         <p>For all the works displayed on this website and are covered by the freedom of panorama, they are released
