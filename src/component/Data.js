@@ -1,8 +1,8 @@
 import modelInfo from './modelInfo.json'
 
 
-function createData(folder, name, fbxUrl, fbxUrlText,photosUrl, photoUrlText, coord, sketchfabUrl) {
-  return {folder, name, fbxUrl, fbxUrlText, photosUrl, photoUrlText, coord, sketchfabUrl};
+function createData(folder, name, fbxUrl, fbxUrlText,photosUrl, photoUrlText, coord, sketchfabUrl,introduction) {
+  return {folder, name, fbxUrl, fbxUrlText, photosUrl, photoUrlText, coord, sketchfabUrl,introduction};
 }
 
 export const rows = modelInfo.map((entry) => {
@@ -13,5 +13,6 @@ export const rows = modelInfo.map((entry) => {
     entry.photosUrl,
     entry.photoUrlText,
     entry.coord,
-    entry.sketchfabUrl));
+    entry.sketchfabUrl,
+    entry.introduction));
 })

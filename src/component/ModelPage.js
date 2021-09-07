@@ -11,6 +11,22 @@ import {IconButton} from "@material-ui/core";
 import {Redirect} from "react-router-dom";
 import "./css/ModelPage.css"
 
+class ModelIntro extends React.Component{
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div id="intro">
+        <p>{this.props.obj.introduction}</p>
+      </div>
+    );
+  }
+
+}
+
+
 export default class ModelPage extends React.Component {
   constructor(props) {
     super(props);
@@ -48,6 +64,7 @@ export default class ModelPage extends React.Component {
             </Typography>
           </Toolbar>
         </AppBar>
+        <ModelIntro obj={obj}/>
         <div className="sketchfab-embed-wrapper">
           <SketchfabEmbedding id="sketchfab" url={obj.sketchfabUrl} title={obj.name}/>
         </div>
