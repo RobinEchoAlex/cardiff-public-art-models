@@ -1,0 +1,14 @@
+#map{
+    margin: 0 auto;
+}
+
+.sketchfab-embed-wrapper {
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+}
+
+#sketchfab{
+    width: 100%;
+    margin: auto;
+}

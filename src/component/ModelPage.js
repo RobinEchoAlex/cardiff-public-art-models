@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import {IconButton} from "@material-ui/core";
 import {Redirect} from "react-router-dom";
+import "./css/ModelPage.css"
 
 export default class ModelPage extends React.Component {
   constructor(props) {
@@ -20,12 +21,17 @@ export default class ModelPage extends React.Component {
     this.state = {}
   }
 
+  componentDidMount() {
+    document.title=this.props.obj.name;
+  }
+
   returnHomePage(){
     this.setState({isReturnToHomeClicked: true})
   }
 
   render() {
     if (this.state.isReturnToHomeClicked){
+      document.title = "Cardiff Public Art Model Repository"
       return <Redirect push to={"/"}/>;
     }
 
@@ -42,11 +48,11 @@ export default class ModelPage extends React.Component {
             </Typography>
           </Toolbar>
         </AppBar>
+        <div className="sketchfab-embed-wrapper">
+          <SketchfabEmbedding id="sketchfab" url={obj.sketchfabUrl} title={obj.name}/>
+        </div>
         <div id="map">
           <Leaflet id="map" coord={obj.coord}/>
-        </div>
-        <div className="sketchfab-embed-wrapper">
-          <SketchfabEmbedding url={obj.sketchfabUrl} title={obj.name}/>
         </div>
       </div>
     )
