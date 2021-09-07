@@ -50,6 +50,7 @@ export default class ModelPage extends React.Component {
 
     const obj = this.props.obj;
     return (
+      // component id here need to be globally unique, i.e. cannot conflict home page element.
       <div>
         <AppBar position="static">
           <Toolbar>
