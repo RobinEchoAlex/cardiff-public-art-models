@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cardiff-public-art-models/static/css/main.69415759.chunk.css",
-    "main.js": "/cardiff-public-art-models/static/js/main.96995a1c.chunk.js",
-    "main.js.map": "/cardiff-public-art-models/static/js/main.96995a1c.chunk.js.map",
+    "main.css": "/cardiff-public-art-models/static/css/main.0bd7d775.chunk.css",
+    "main.js": "/cardiff-public-art-models/static/js/main.c7e0373d.chunk.js",
+    "main.js.map": "/cardiff-public-art-models/static/js/main.c7e0373d.chunk.js.map",
     "runtime-main.js": "/cardiff-public-art-models/static/js/runtime-main.496d243b.js",
     "runtime-main.js.map": "/cardiff-public-art-models/static/js/runtime-main.496d243b.js.map",
     "static/js/2.a2fffb87.chunk.js": "/cardiff-public-art-models/static/js/2.a2fffb87.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.1ecb07d6.chunk.js": "/cardiff-public-art-models/static/js/3.1ecb07d6.chunk.js",
     "static/js/3.1ecb07d6.chunk.js.map": "/cardiff-public-art-models/static/js/3.1ecb07d6.chunk.js.map",
     "index.html": "/cardiff-public-art-models/index.html",
-    "static/css/main.69415759.chunk.css.map": "/cardiff-public-art-models/static/css/main.69415759.chunk.css.map",
+    "static/css/main.0bd7d775.chunk.css.map": "/cardiff-public-art-models/static/css/main.0bd7d775.chunk.css.map",
     "static/js/2.a2fffb87.chunk.js.LICENSE.txt": "/cardiff-public-art-models/static/js/2.a2fffb87.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.496d243b.js",
     "static/js/2.a2fffb87.chunk.js",
-    "static/css/main.69415759.chunk.css",
-    "static/js/main.96995a1c.chunk.js"
+    "static/css/main.0bd7d775.chunk.css",
+    "static/js/main.c7e0373d.chunk.js"
   ]
 }
