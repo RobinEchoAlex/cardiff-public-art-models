@@ -5,15 +5,20 @@
 
 #map-indi{
     margin: 0 auto;
+    min-height: 30%;
+    max-height: 40%;
 }
 
 .sketchfab-embed-wrapper-indi {
     margin: auto;
     width: 90%;
     padding: 10px;
+    min-height: 40%;
+    max-height: 50%;
 }
 
 #sketchfab-indi{
     width: 100%;
+    height: 100%;
     margin: auto;
 }
