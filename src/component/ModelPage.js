@@ -16,7 +16,7 @@ class ModelIntro extends React.Component{
 
   render() {
     return (
-      <div id="intro">
+      <div id="intro-indi">
         <p>{this.props.obj.introduction}</p>
       </div>
     );
@@ -62,10 +62,10 @@ export default class ModelPage extends React.Component {
           </Toolbar>
         </AppBar>
         <ModelIntro obj={obj}/>
-        <div className="sketchfab-embed-wrapper">
-          <SketchfabEmbedding id="sketchfab" url={obj.sketchfabUrl} title={obj.name}/>
+        <div className="sketchfab-embed-wrapper-indi">
+          <SketchfabEmbedding id="sketchfab-indi" url={obj.sketchfabUrl} title={obj.name}/>
         </div>
-        <div id="map">
+        <div id="map-indi">
           <Leaflet id="map" coord={obj.coord}/>
         </div>
       </div>
