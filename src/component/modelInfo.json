@@ -9,7 +9,8 @@
       51.485999751019435,
       -3.1802259356889366
     ],
-    "sketchfabUrl": "https://sketchfab.com/models/ca05b951486840cda1a45e7a890128f9/embed"
+    "sketchfabUrl": "https://sketchfab.com/models/ca05b951486840cda1a45e7a890128f9/embed",
+    "introduction": "This monument is to recognise and pay tribute to the diverse ethnic and commonwealth soldiers during WWI and WWII. It is unveiled on November 2019, as a finale of Black History Moth Wales."
   },
   {
     "folder": "skeleton2",
@@ -21,7 +22,9 @@
       51.48374634245954,
       -3.1782340219244305
     ],
-    "sketchfabUrl": "https://sketchfab.com/models/a24b2438e3674b3b8c334d136dc89126/embed"
+    "sketchfabUrl": "https://sketchfab.com/models/a24b2438e3674b3b8c334d136dc89126/embed",
+    "introduction": "Design by sculptors Wills Brothers in 1860, the drinking fountain was originally a part of the Town Hall in St Mary Street and was relocated when the building was demolished in 1914."
+
   },
   {
     "folder": "magistrates",
@@ -131,5 +134,37 @@
     "coord": [51.48702913723982, -3.187888630268352],
     "sketchfabUrl": "https://sketchfab.com/models/4a34603bba2a4f6980ffe2c0a177d9cc/embed"
 
-  }
+  },
+  {
+    "folder": "Tribute to Dwynwen",
+    "name": "Tribute to Dwynwen",
+    "fbxUrl": "",
+    "fbxUrlText":"",
+    "photosUrl": "https://terabox.com/s/1Aj7Vglvu9Xlw_CF60DLMfg",
+    "photoUrlText": "xc8r",
+    "coord": [51.486580, -3.187643],
+    "sketchfabUrl": "https://sketchfab.com/models/7d52cfe96fc34a9fbc9f73938202e2b0/embed"
+
+  },
+  {
+    "folder": "Army",
+    "name": "Territorial Army Centre",
+    "fbxUrl": "https://terabox.com/s/1BkIweNNRyTqGYE_A0wyJCA",
+    "fbxUrlText":"7sxq",
+    "photosUrl": "https://terabox.com/s/1z2ZmGXqYvw3BxGg3sjaieA",
+    "photoUrlText": "usuw",
+    "coord": [51.479229301641915, -3.1678430825622095],
+    "sketchfabUrl": "https://sketchfab.com/models/188f1d7ba7f94f5baa422aea8b1cf0a3/embed"
+
+  },{
+  "folder": "Bute70",
+  "name": "Cardiff Bute Park 70th Anniversary",
+  "fbxUrl": "https://terabox.com/s/1DOP0KJr-4zw1UKHiK6xEFQ",
+  "fbxUrlText":"k2ki",
+  "photosUrl": "https://terabox.com/s/1s8VL4r7oIc-M7-MnnPXtNw",
+  "photoUrlText": "vhnz",
+  "coord": [51.489436315810266, -3.188881443084343],
+  "sketchfabUrl": "https://sketchfab.com/models/e1bc8e33582c4630a2095380d31accbb/embed"
+
+}
 ]
