@@ -24,7 +24,6 @@
     ],
     "sketchfabUrl": "https://sketchfab.com/models/a24b2438e3674b3b8c334d136dc89126/embed",
     "introduction": "Design by sculptors Wills Brothers in 1860, the drinking fountain was originally a part of the Town Hall in St Mary Street and was relocated when the building was demolished in 1914."
-
   },
   {
     "folder": "magistrates",
@@ -55,14 +54,15 @@
     "folder": "Welsh-National-Falklands",
     "name": "Welsh National Falklands War Memorial",
     "fbxUrl": "https://terabox.com/s/1UTR-AWicmjUtqJGbBm9bJg",
-    "fbxUrlText":"8cfk",
+    "fbxUrlText": "8cfk",
     "photosUrl": "https://terabox.com/s/1-82w8DX87a74GakPNvtHBw",
     "photoUrlText": "s8a9",
     "coord": [
       51.48643699878738,
       -3.179769501709791
     ],
-    "sketchfabUrl": "https://sketchfab.com/models/a4b565b1ca7e41078e35dbf679f1c356/embed"
+    "sketchfabUrl": "https://sketchfab.com/models/a4b565b1ca7e41078e35dbf679f1c356/embed",
+    "introduction": "The Falklands War Memorial was created in 2007 to commemorate those who died in the Falklands conflict of 1982. The memorial was created by the Wales branch of the South Atlantic Medal Association and the stone on the top is taken directly from Mount Harriet in 1982."
   },
   {
     "folder": "Spanish-Civil-War",
@@ -75,7 +75,8 @@
       51.48632341791083,
       -3.179514701822805
     ],
-    "sketchfabUrl": "https://sketchfab.com/models/78a394b0e06e4ce1b7d7194446dc32a8/embed"
+    "sketchfabUrl": "https://sketchfab.com/models/78a394b0e06e4ce1b7d7194446dc32a8/embed",
+    "introduction": "This stone memorial was created in 1992 to commemorate the 169 Welsh Volunteers who helped aid the Spanish civil war in the 1930; 36 of which died in the conflict."
   },
   {
     "folder": "Gift-of-Life",
@@ -88,7 +89,8 @@
       51.48736569892362,
       -3.181433801822741
     ],
-    "sketchfabUrl": "https://sketchfab.com/models/1e190c97e9c84735ada8711836a030d9/embed"
+    "sketchfabUrl": "https://sketchfab.com/models/1e190c97e9c84735ada8711836a030d9/embed",
+    "introduction": "This memorial stone was gifted by Kidney Wales (2007) to commemorate those who have donated organs to the charity over the years since 1967, and even those before then Including the youngest organ donor in the UK Teddy Houlston from Cardiff who donated organs after just 100 minutes of being alive."
   },
   {
     "folder": "Pit-to-Port",
@@ -101,81 +103,100 @@
       51.46208827962767,
       -3.160416044038915
     ],
-    "sketchfabUrl": "https://sketchfab.com/models/111041d20d304a819f864b261310228b/embed"
+    "sketchfabUrl": "https://sketchfab.com/models/111041d20d304a819f864b261310228b/embed",
+    "introduction": "This sculpture made by Jon Buck and John Clinch, commemorates the contribution of all of the people who formed the link in the chain between exports at Cardiff Docks and the coal mining industry in the Welsh Valleys. This sculpture was finished in 2005 and features a life size coal miner leaning against a dram containing a pit winding wheel, smoking factory chimney and ship, symbolical of the cycle of the coal industry which the docklands are well known for."
   },
   {
-  "folder": "Antarctic 100",
-  "name": "Antarctic 100",
-  "fbxUrl": "https://terabox.com/s/1OAKSeU_T8dRPilf6IO0VZw",
-  "fbxUrlText":"yg35",
-  "photosUrl": "https://terabox.com/s/1iXFmq0t0JdAhXQ04VGZ25w",
-  "photoUrlText": "6uc6",
-  "coord": [51.46116720299543, -3.161656115137909],
-    "sketchfabUrl": "https://sketchfab.com/models/431b9bcf71854defb314e8dc8f018991/embed"
-
-},  {
-  "folder": "Harmony Peace",
-  "name": "Harmony Peace",
-  "fbxUrl": "https://terabox.com/s/1ozsSLHm-7ZaPzm14gb1MPQ",
-  "fbxUrlText":"86nh",
-  "photosUrl": "https://terabox.com/s/1xF_-J2QB_OJnxhPWh1kj_Q",
-  "photoUrlText": "83d6",
-  "coord": [51.462269710859466, -3.1618952305465675],
-
-  "sketchfabUrl": "https://sketchfab.com/models/736ce20ee77341a09b65337c24a1a886/embed"
-
-},
+    "folder": "Antarctic 100",
+    "name": "Antarctic 100",
+    "fbxUrl": "https://terabox.com/s/1OAKSeU_T8dRPilf6IO0VZw",
+    "fbxUrlText": "yg35",
+    "photosUrl": "https://terabox.com/s/1iXFmq0t0JdAhXQ04VGZ25w",
+    "photoUrlText": "6uc6",
+    "coord": [
+      51.46116720299543,
+      -3.161656115137909
+    ],
+    "sketchfabUrl": "https://sketchfab.com/models/431b9bcf71854defb314e8dc8f018991/embed",
+    "introduction": "This statue was awarded by the British Antarctic Heratige Trust in commemoration of the 100th anniversary of the “Age of Antarctic Descovery” and was formally unveiled in June 2003 by her Royal Highness, the Princess Royal. The statue depicts Captain Scott and his comrades encased in the snow. The base of the statue is a compass rose which now is illuminated at night by embedded lights."
+  },
+  {
+    "folder": "Harmony Peace",
+    "name": "Harmony Peace",
+    "fbxUrl": "https://terabox.com/s/1ozsSLHm-7ZaPzm14gb1MPQ",
+    "fbxUrlText": "86nh",
+    "photosUrl": "https://terabox.com/s/1xF_-J2QB_OJnxhPWh1kj_Q",
+    "photoUrlText": "83d6",
+    "coord": [
+      51.462269710859466,
+      -3.1618952305465675
+    ],
+    "sketchfabUrl": "https://sketchfab.com/models/736ce20ee77341a09b65337c24a1a886/embed",
+    "introduction": "Sculpted by Kaivalya Torpy, this statue was donated to Cardiff by the World Harmony Run and was unveiled on March 11th 2012 by the Lord Mayor of Cardiff. The statue marks the 25th anniversary of the world harmony run. This statue is a symbol that promotes peace and understanding."
+  },
   {
     "folder": "A Wood Sculpture In Bute Park",
     "name": "A Wood Sculpture In Bute Park",
     "fbxUrl": "https://terabox.com/s/1YQVMDiimnLNZ02q5efo__A",
-    "fbxUrlText":"cj3q",
+    "fbxUrlText": "cj3q",
     "photosUrl": "https://terabox.com/s/1Cx4bO-lF34Toz9ai8ySlLQ",
     "photoUrlText": "b3wa",
-    "coord": [51.48702913723982, -3.187888630268352],
+    "coord": [
+      51.48702913723982,
+      -3.187888630268352
+    ],
     "sketchfabUrl": "https://sketchfab.com/models/4a34603bba2a4f6980ffe2c0a177d9cc/embed"
-
   },
   {
     "folder": "Tribute to Dwynwen",
     "name": "Tribute to Dwynwen",
     "fbxUrl": "https://terabox.com/s/1FpsACRShW8jBMTVAjiiJhg",
-    "fbxUrlText":"s6eq",
+    "fbxUrlText": "s6eq",
     "photosUrl": "https://terabox.com/s/1Aj7Vglvu9Xlw_CF60DLMfg",
     "photoUrlText": "xc8r",
-    "coord": [51.486580, -3.187643],
+    "coord": [
+      51.486580,
+      -3.187643
+    ],
     "sketchfabUrl": "https://sketchfab.com/models/7d52cfe96fc34a9fbc9f73938202e2b0/embed"
-
   },
   {
     "folder": "Army",
     "name": "Territorial Army Centre",
     "fbxUrl": "https://terabox.com/s/1BkIweNNRyTqGYE_A0wyJCA",
-    "fbxUrlText":"7sxq",
+    "fbxUrlText": "7sxq",
     "photosUrl": "https://terabox.com/s/1z2ZmGXqYvw3BxGg3sjaieA",
     "photoUrlText": "usuw",
-    "coord": [51.479229301641915, -3.1678430825622095],
+    "coord": [
+      51.479229301641915,
+      -3.1678430825622095
+    ],
     "sketchfabUrl": "https://sketchfab.com/models/188f1d7ba7f94f5baa422aea8b1cf0a3/embed"
-
-  },{
-  "folder": "Bute70",
-  "name": "Cardiff Bute Park 70th Anniversary",
-  "fbxUrl": "https://terabox.com/s/1DOP0KJr-4zw1UKHiK6xEFQ",
-  "fbxUrlText":"k2ki",
-  "photosUrl": "https://terabox.com/s/1s8VL4r7oIc-M7-MnnPXtNw",
-  "photoUrlText": "vhnz",
-  "coord": [51.489436315810266, -3.188881443084343],
-  "sketchfabUrl": "https://sketchfab.com/models/e1bc8e33582c4630a2095380d31accbb/embed"
-
-},{
-  "folder": "cycle",
-  "name": "National Cycle Network Milestones",
-  "fbxUrl": "https://terabox.com/s/1M7ALXzRlp3phlW4OuFwI5g",
-  "fbxUrlText":"eei9",
-  "photosUrl": "https://terabox.com/s/1kOZT_D1NPpbjUOcBZNZWkA",
-  "photoUrlText": "af26",
-  "coord": [51.487909800868366, -3.186438337440875],
-  "sketchfabUrl": "https://sketchfab.com/models/02d6727e77ea4cb08ab2f1c0697b61f6/embed"
-
-}
+  },
+  {
+    "folder": "Bute70",
+    "name": "Cardiff Bute Park 70th Anniversary",
+    "fbxUrl": "https://terabox.com/s/1DOP0KJr-4zw1UKHiK6xEFQ",
+    "fbxUrlText": "k2ki",
+    "photosUrl": "https://terabox.com/s/1s8VL4r7oIc-M7-MnnPXtNw",
+    "photoUrlText": "vhnz",
+    "coord": [
+      51.489436315810266,
+      -3.188881443084343
+    ],
+    "sketchfabUrl": "https://sketchfab.com/models/e1bc8e33582c4630a2095380d31accbb/embed"
+  },
+  {
+    "folder": "cycle",
+    "name": "National Cycle Network Milestones",
+    "fbxUrl": "https://terabox.com/s/1M7ALXzRlp3phlW4OuFwI5g",
+    "fbxUrlText": "eei9",
+    "photosUrl": "https://terabox.com/s/1kOZT_D1NPpbjUOcBZNZWkA",
+    "photoUrlText": "af26",
+    "coord": [
+      51.487909800868366,
+      -3.186438337440875
+    ],
+    "sketchfabUrl": "https://sketchfab.com/models/02d6727e77ea4cb08ab2f1c0697b61f6/embed"
+  }
 ]
