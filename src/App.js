@@ -6,7 +6,7 @@ import {Leaflet} from "./component/leaflet";
 import "./App.css"
 import MediaQuery from 'react-responsive'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router, //https://medium.com/@arijit_chowdhury/deploy-react-app-with-react-router-to-github-pages-for-free-569377f483f
   Switch,
   Route,
   Link
