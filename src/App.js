@@ -39,6 +39,9 @@ const LaptopLayout = (props) => {
           under CC BY-SA 4.0.
           For all other works, the are intended for non-commercial research and study under the fair dealing terms.
         </p>
+        <p>
+          <a href="https://github.com/RobinEchoAlex/cardiff-public-art-models/issues">Contact developer / Report a Issue</a>
+        </p>
       </footer>
     </div>
   )
@@ -62,6 +65,9 @@ const MobileLayout = (props) => {
         <p>For all the works displayed on this website and are covered by the freedom of panorama, they are released
           under CC BY-SA 4.0.
           For all other works, the are intended for non-commercial research and study under the fair dealing terms.
+        </p>
+        <p>
+          <a href="https://github.com/RobinEchoAlex/cardiff-public-art-models/issues">Contact developer / Report a Issue</a>
         </p>
       </footer>
     </div>
